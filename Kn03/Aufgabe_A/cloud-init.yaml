@@ -1,0 +1,15 @@
+#cloud-config
+users: # Dies ist der Beginn einer Liste von Benutzerkonfigurationen
+  - name: ubuntu # Hier wird ein Benutzer mit dem Namen ubuntu erstellt
+    sudo: ALL=(ALL) NOPASSWD:ALL # Dies ermöglicht dem Benutzer ubuntu, alle Befehle mit administrativen Rechten ohne Passwortabfrage auszuführen
+    groups: users, admin # Der Benutzer ubuntu wird den Gruppen users und admin hinzugefügt
+    home: /home/ubuntu # Dies legt das Heimatverzeichnis des Benutzers ubuntu auf /home/ubuntu fest
+    shell: /bin/bash # Der Benutzer ubuntu verwendet die Bash-Shell
+    ssh_authorized_keys: #  Hier können öffentliche SSH-Schlüssel für die Benutzerauthentifizierung hinzugefügt werden. In diesem Beispiel wird ein SSH-Schlüssel (Beginnend mit ssh-rsa) angegeben
+      - ssh-rsa MIIEpAIBAAKCAQEAyNO8DBqQxini82fivDBIhCG0B5CzPcoKZZrbdCjbExToxdiHdTuPPFdQRgCQ3y1V2hnX0X+TEXaFm59r30ePf1O3jbA+RJZN0/jYjPjatljYhyfYveVuoyc2Du1hBczyX6WxSTOaIty4gsozFoWfgLRDEvZkaoGdxBIV+MitqpDKe06dgORej3lqUC4nKMUkbjuaoLBBo0l8b3xbnuAObJJ6mRXs/oemGpsvCGJ3fYGCPDZaYb6V3NsvDWln1S3mWJ3ceFr+wsOdXKoVtO76bAIiF/x1V5sHV8hQ77I71sVTQKisflR4h6E+GPIAPZX7ct8ZCFaltMkWnGVd6gvDTwIDAQABAoIBAGv7HPNNHWbPgs3pn8ocFAGntYsTzKx+hBSZrUHJ7fFWnsoyYLMyMRP6xpi9GShG0hCRMK/ebo9HMRO6JmBJs+h8dQdkKjbqsjI1bQpvi/nbz6DsVefVAyYKoVBpZm+eAPxYtPhtHIV+NF9upQWJF3g2dJIvlVKHGvMf3lyEWoyIlXZsMD7KcOVJdV6tTVgtcDZdbkpZ3HDmgqeACNEAUzrBdO6D6BY/wK7YoDQ/6HUfFo3hblF5C/QvNPm53n6PrX+cBLZA+aNYtaX5KT381ki7IV3W8BcDXNQBAUJLx7s/INP+hCBSYUTPm3u0jxMuP/XbFDY4XvwNu3/aeoQZOxECgYEA8GoYnyOdCr/tPW8okFQ24J8odsMP4UyP8vpattwB+DN2gfSDnifGVHqn5xS0rXP9fonoWxMU2Q9oZS4LBoaTIJkf0Omin1jj6ndmdS0p9fsLvCN0GjBuyuXvIj6wPZHU3nGk+QF403+nvFb5XoxMYgN38Ere5KZvvhZNehuJ4ZsCgYEA1dimKJhlMDb7f2R/MEwoul+L/nQCK6I+W1cJByJ+giC5K81ommg2vd4DETn1YwN9N4RkBeH4b1XcJmfmFifs0lYCfwYKezEwz7BIYk43c6t2rk5wzcdaWtEIuqlqayImFcpTe7Os1SyVUmy5iaXMopLZGeGZXgSflgCUVawaSl0CgYEAxfMFjNqc7oHyy7ef1Z6RhMdnYMnhZGdOywhZ8uAZewyckgoK6Qjk4yAO6VSCI6MyYKMaPwrqCoMGOPD9QQVDVP7fVHtaXAurtZ1ULjzepNts4R7r9LhWMRe7mx20rS1K8VDvPdt5aeNc79VJBBFOvxEOCzsKZYeo0AG7D0RndesCgYEArKkvh6l8UhCiwbov45wqakjJLNsYAYkPFgrRFDyqroCjYhWIttscD/NYwKjuU1K24IN5izJnt+U4Sp4rLYpw8WdWvp7vCYavJZHs78q9hRxVR+m3tL6YWqlahfRSI0xAOenRvBhXnQtRSWrV56jB8CXnOrlnbn0HKUMwgXfjBlUCgYBkm7IJd5tXGwF89xNwDXV9486VsrqheWlnhaBEeiUn+nulbkrfyYFID+ueEhgLD6fW2HoPYyEWQQfAqpT3pgJmdvaD3ORn+X8W6OJSiTAH7x9RwMyfG+Y+t8nczefvdstbD0liyuqXTwBBeN+SQbbj92S4bwa4QSziFzw48XLk1w== eduard1       
+ssh_pwauth: false # Die SSH-Passwortauthentifizierung ist deaktiviert
+disable_root: false # Die Root-Authentifizierung ist nicht deaktiviert, was bedeutet, dass der Root-Benutzer weiterhin SSH verwenden kann
+package_update: true # Dies bedeutet, dass das System nach der Konfiguration auf aktualisierte Pakete überprüft werden soll
+packages: # Hier werden Pakete aufgelistet, die auf dem System installiert werden sollen. In diesem Fall sind es curl und wget
+  - curl 
+  - wget 
