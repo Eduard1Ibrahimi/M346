@@ -6,7 +6,7 @@ users: # Dies ist der Beginn einer Liste von Benutzerkonfigurationen
     home: /home/ubuntu # Dies legt das Heimatverzeichnis des Benutzers ubuntu auf /home/ubuntu fest
     shell: /bin/bash # Der Benutzer ubuntu verwendet die Bash-Shell
     ssh_authorized_keys: #  Hier können öffentliche SSH-Schlüssel für die Benutzerauthentifizierung hinzugefügt werden. In diesem Beispiel wird ein SSH-Schlüssel (Beginnend mit ssh-rsa) angegeben
-      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDI07wMGpDGKeLzZ+K8MEiEIbQHkLM9ygplmtt0KNsTFOjF2Id1O488V1BGAJDfLVXaGdfRf5MRdoWbn2vfR49/U7eNsD5Elk3T+NiM+Nq2WNiHJ9i95W6jJzYO7WEFzPJfpbFJM5oi3LiCyjMWhZ+AtEMS9mRqgZ3EEhX4yK2qkMp7Tp2A5F6PeWpQLicoxSRuO5qgsEGjSXxvfFue4A5sknqZFez+h6Yamy8IYnd9gYI8NlphvpXc2y8NaWfVLeZYndx4Wv7Cw51cqhW07vpsAiIX/HVXmwdXyFDvsjvWxVNAqKx+VHiHoT4Y8gA9lfty3xkIVqW0yRacZV3qC8NP
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDI07wMGpDGKeLzZ+K8MEiEIbQHkLM9ygplmtt0KNsTFOjF2Id1O488V1BGAJDfLVXaGdfRf5MRdoWbn2vfR49/U7eNsD5Elk3T+NiM+Nq2WNiHJ9i95W6jJzYO7WEFzPJfpbFJM5oi3LiCyjMWhZ+AtEMS9mRqgZ3EEhX4yK2qkMp7Tp2A5F6PeWpQLicoxSRuO5qgsEGjSXxvfFue4A5sknqZFez+h6Yamy8IYnd9gYI8NlphvpXc2y8NaWfVLeZYndx4Wv7Cw51cqhW07vpsAiIX/HVXmwdXyFDvsjvWxVNAqKx+VHiHoT4Y8gA9lfty3xkIVqW0yRacZV3qC8NP aws-key
 ssh_pwauth: false # Die SSH-Passwortauthentifizierung ist deaktiviert
 disable_root: false # Die Root-Authentifizierung ist nicht deaktiviert, was bedeutet, dass der Root-Benutzer weiterhin SSH verwenden kann
 package_update: true # Dies bedeutet, dass das System nach der Konfiguration auf aktualisierte Pakete überprüft werden soll
